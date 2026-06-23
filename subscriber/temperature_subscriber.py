@@ -5,7 +5,7 @@ import paho.mqtt.client as mqtt
 MQTT_BROKER_HOST = os.getenv("MQTT_BROKER_HOST", "mqtt-broker")
 MQTT_BROKER_PORT = int(os.getenv("MQTT_BROKER_PORT", "1883"))
 CLIENT_ID = "PythonTemperatureSubscriber"
-SUBSCRIBE_TOPIC = "pittsburgh/temperature/hotTemps"
+SUBSCRIBE_TOPIC = "pittsburgh/temperature/#"
 QOS = 2
 
 def on_connect(client, userdata, flags, rc):
